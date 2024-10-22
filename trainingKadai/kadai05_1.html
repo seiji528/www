@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>課題</title>
+</head>
+<body>
+    <p><button onclick="add();">足し算</button></p>
+    <p><button onclick="subtract();">引き算</button></p>
+    <p><button onclick="multiply();">掛け算</button></p>
+    <p><button onclick="divide();">割り算</button></p>
+
+    <script>
+        let a = 10;
+        let b = 4;
+        let total = 0;
+
+        function add(){
+            total = a + b;
+            alert(total);
+        }
+
+        function subtract(){
+            total = a - b;
+            alert(total);
+        }
+
+        function multiply(){
+            total = a * b;
+            alert(total);
+        }
+
+        function divide(){
+            total = a / b;
+            alert(total);
+        }
+    </script>
+    
+</body>
+</html>
