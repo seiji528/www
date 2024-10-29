@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用料の計算</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            
+        }
+        th {
+            background-color: orange;
+            color: black;
+        }
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        #no{
+            background-color: orange;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h2>利用料の計算</h2>
+    <table>
+        <tr>
+            <th>No.</th>
+            <th>料金(a)</th>
+            <th>人数(b)</th>
+            <th>a×b</th>
+        </tr>
+        <tr>
+            <td id="no">0</td>
+            <td id="price0">500</td>
+            <td id="people0">10</td>
+            <td><button onclick="multiply(0);">利用料の合計</button></td>
+        </tr>
+        <tr>
+            <td id="no">1</td>
+            <td id="price1">980</td>
+            <td id="people1">16</td>
+            <td><button onclick="multiply(1);">利用料の合計</button></td>
+        </tr>
+        <tr>
+            <td id="no">2</td>
+            <td id="price2">1200</td>
+            <td id="people2">8</td>
+            <td><button onclick="multiply(2);">利用料の合計</button></td>
+        </tr>
+    </table>
+
+    <script>
+        let a = [500,980,1200];
+        let b = [10,16,8];
+        let total = 0;
+
+        function multiply(i){
+            total = a[i] * b[i];
+            alert("料金は" + total + "円です");
+        }
+
+        
+    </script>
+
+    
+</body>
+</html>
