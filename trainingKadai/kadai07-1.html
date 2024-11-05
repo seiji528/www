@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="chn">1.中国</h3>
+    <h3 id="ind">2.インド</h3>
+    <h3 id="usa">3.アメリカ</h3>
+    <h3 id="idn">4.インドネシア</h3>
+    <button onclick="changeTxet()">国旗で表示</button>
+
+
+    <script>
+        function changeTxet(){
+            document.getElementById("idn").innerHTML = '<img src="flag_IDN.png">'
+            document.getElementById("chn").innerHTML = '<img src="flag_CHN.png">'
+            document.getElementById("ind").innerHTML = '<img src="flag_IND.png">'
+            document.getElementById("usa").innerHTML = '<img src="flag_USA.png">'
+        }
+    </script>
+</body>
+</html>
