@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .dis{
+        width: 650px;
+        padding: 15px;
+        margin: 25px 0px;
+        background-color: antiquewhite;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>n~mで割り切れる数字</h1>
+    <p>1~10の範囲で<br>割り切れる最小の数値をJavascriptで求めます</p>
+    <button onclick="show()">範囲の設定</button>
+    <div class="dis" id="anser">ここに結果が表示されます</div>
+
+    <script>
+        function show(){
+            let min = parseInt(prompt('範囲の最小値を入力してください'));
+            let max = parseInt(prompt('範囲の最大値を入力してください'));
+            let text = 0;
+
+            for(let i = min; i <= max; i++){
+                let flag = check(i);
+                if(flag){
+                    text = i;
+                    break;
+                }
+            }
+
+            document.getElementById("anser").innerHTML = min + "~" + max + "で割り切れる最小値は" + text;
+        }
+
+        function check(num){
+            for(let j = 1; j < 1000; j++){
+                if(num % j !== 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+    
+</body>
+</html>
