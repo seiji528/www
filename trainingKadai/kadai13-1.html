@@ -25,22 +25,27 @@
         function show(){
             let min = parseInt(prompt('範囲の最小値を入力してください'));
             let max = parseInt(prompt('範囲の最大値を入力してください'));
-            let text = 0;
+            console.log("min:", min, "max:", max);
+            if(!/^\d+$/.test(min) || !/^\d+$/.test(max) || isNaN(min) || isNaN(max) || min < 1 || max > 10 || min > max){
+                document.getElementById("anser").innerHTML = "正しい値を入力してください";
+                return;
+            }
+            let number = 1;
 
-            for(let i = min; i <= max; i++){
-                let flag = check(i);
-                if(flag){
-                    text = i;
+            
+
+            while(true){
+                if(check(number,min,max)){
+                    document.getElementById("anser").innerHTML = min + "~" + max + "で割り切れる最小値は" + number;
                     break;
                 }
+                number++;
             }
-
-            document.getElementById("anser").innerHTML = min + "~" + max + "で割り切れる最小値は" + text;
         }
 
-        function check(num){
-            for(let j = 1; j < 1000; j++){
-                if(num % j !== 0){
+        function check(num,min,max){
+            for(let i = min; i <= max; i++){
+                if(num % i !== 0){
                     return false;
                 }
             }
