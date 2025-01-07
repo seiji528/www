@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .box {
+            width: px;
+            height: 150px;
+            background-color: white;
+            border: 2px solid ;
+            padding: 20px;
+            margin: 20px;
+        }
+        .box2{
+            width: px;
+            height: 50px;
+            border: 2px solid;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTMLの表示</h1>
+    <h3>ボックス内の表示されている部分のHTMLを表示します</h3>
+
+    <div class="box">
+        <h3>人口800万人以上の都道府県</h3>
+        <ul>
+            <li>東京都</li>
+            <li>神奈川県</li>
+            <li>大阪府</li>
+        </ul>
+    </div>
+
+    <button onclick="show()">HTML表示</button>
+
+    <div class="box2" id="box2">
+        <h3 id="change">　　ここに表示されます</h3>
+    </div>
+</body>
+
+    <script>
+        function show(){
+            document.getElementById("change").innerText="<pre><code><h3>人口800万人以上の都道府県</h3><ul><li>東京都</li><li>神奈川県</li><li>大阪府</li> </ul></code></pre>";
+            document.getElementById("box2").style.height="100px";
+        }
+
+    </script>
+</html>
