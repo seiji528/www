@@ -1,0 +1,20 @@
+{
+  "name": "artster",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": " "
+  },
+  "keywords": [],
+  "author": "ogura",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "figlet": "^1.8.1"
+  }
+}
